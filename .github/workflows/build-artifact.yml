@@ -21,7 +21,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
         with:
           cache-read-only: false
-      - run: ./gradlew jar -x test -x detekt -x dokkaGenerate -x npmInstall -x packageJson --no-daemon
+      - run: ./gradlew jar -x test -x detekt -x dokkaGenerate -x npmInstall --no-daemon
         env:
           CI: true
       - uses: actions/upload-artifact@v7
